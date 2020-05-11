@@ -1,0 +1,10 @@
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+button{
+    display: inline-block;
+    margin:10px;
+}
