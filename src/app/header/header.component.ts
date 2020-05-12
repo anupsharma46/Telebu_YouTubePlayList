@@ -14,14 +14,14 @@ export class HeaderComponent implements OnInit {
   }
 
   playAll(){
-   this.playlistService.videoController.map((player)=>{player.playVideo()});
+   this.playlistService.videoController.forEach((player)=>{player.playVideo()});
   }
  
   stopAll(){
-    this.playlistService.videoController.map((player)=>{player.stopVideo()})
+    this.playlistService.videoController.forEach((player)=>{player.stopVideo()})
   }
 
   pauseAll(){
-    this.playlistService.videoController.map((player)=>{player.pauseVideo()});
+    this.playlistService.videoController.forEach((player)=>{player.pauseVideo()});
   }
 }
