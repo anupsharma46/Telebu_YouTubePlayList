@@ -12,10 +12,6 @@ export class AppComponent {
  constructor(public playlistService: PlaylistService){}
 
  videos: Video[] = this.playlistService.getAllVideo();
-  
-  ngOnInit(){  
-    this.playlistService.onYouTubeIframeAPIReady();
-  }
 
   fromPlaylist(){
     this.playlistService.onYouTubeIframeAPIReady();
