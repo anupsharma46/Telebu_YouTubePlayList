@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   }
 
   playAll(){
-   this.playlistService.videoController.forEach((player)=>{player.playVideo()});
+   this.playlistService.videoController.forEach((player)=>{player.playVideo()})
   }
  
   stopAll(){
@@ -22,6 +22,6 @@ export class HeaderComponent implements OnInit {
   }
 
   pauseAll(){
-    this.playlistService.videoController.forEach((player)=>{player.pauseVideo()});
+    this.playlistService.videoController.forEach((player)=>{player.pauseVideo()})
   }
 }
