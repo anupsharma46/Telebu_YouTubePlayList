@@ -12,7 +12,7 @@ export class PlaylistService {
   public videoController=[];
   constructor() { 
     this.VIDEOS=[
-                  {playListId: 'player0', videoTitle:'Sample video', videoUrl:'tgbNymZ7vqY', flag: true},
+                //  {playListId: 'player0', videoTitle:'Sample video', videoUrl:'tgbNymZ7vqY', flag: true},
                 ]
   }
 
