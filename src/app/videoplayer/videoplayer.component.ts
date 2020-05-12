@@ -9,16 +9,11 @@ import { Video } from '../interfaces/video';
 })
 export class VideoplayerComponent implements OnInit {
 
-  @Input() test:any;
   videos: Video[];
   constructor(public playlistService: PlaylistService) {  }
 
   ngOnInit(){  
     this.videos = this.playlistService.getAllVideo();
-    this.playlistService.onYouTubeIframeAPIReady();
-  }
-  
-  fromPlaylist(){
     this.playlistService.onYouTubeIframeAPIReady();
   }
 }
