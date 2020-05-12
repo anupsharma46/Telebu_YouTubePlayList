@@ -18,7 +18,7 @@ export class VideoplayerComponent implements OnInit {
     this.playlistService.onYouTubeIframeAPIReady();
   }
   
-  from(){
+  fromPlaylist(){
     this.playlistService.onYouTubeIframeAPIReady();
   }
 }

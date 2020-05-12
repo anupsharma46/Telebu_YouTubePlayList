@@ -17,7 +17,7 @@ export class AppComponent {
     this.playlistService.onYouTubeIframeAPIReady();
   }
 
-  from(){
+  fromPlaylist(){
     this.playlistService.onYouTubeIframeAPIReady();
   }
 }

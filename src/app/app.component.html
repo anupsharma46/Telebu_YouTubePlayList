@@ -3,11 +3,7 @@
     <app-header class="col-sm-12 border-bottom" style="padding: 15px;"></app-header>
   </div>
   <div class="row">
-    <app-playlist class="col-md-3 border-right" style="padding: 5px;" (fromPlayList)="from()"></app-playlist>
+    <app-playlist class="col-md-3 border-right" style="padding:5px;" (eventFromPlayList)="fromPlaylist()"></app-playlist>
     <app-videoplayer [test]='from' class="col-md-9 mt-2"></app-videoplayer>
   </div>
 </div> 
-
-
-
-

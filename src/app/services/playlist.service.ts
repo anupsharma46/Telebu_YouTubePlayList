@@ -27,9 +27,8 @@ export class PlaylistService {
         for(this.i = 0; this.i < this.VIDEOS.length; this.i++) {
           if(this.VIDEOS[this.i].flag){
             this.VIDEOS[this.i].flag=false;
-          var set = this.createVideoPlayer(this.VIDEOS[this.i]);
-          this.videoController.push(set);
-          console.log(this.videoController);
+          var control = this.createVideoPlayer(this.VIDEOS[this.i]);
+          this.videoController.push(control);
           }
         }
       },1000); 
@@ -41,7 +40,7 @@ export class PlaylistService {
          width: '300',
          videoId: videoinfo.videoUrl,
          events: {
-           'onReady': this.onPlayerReady
+           //'onReady': this.onPlayerReady
          }
       });
   }

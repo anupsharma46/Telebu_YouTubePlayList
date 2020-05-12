@@ -13,7 +13,7 @@ export class PlaylistComponent implements OnInit {
   videoUrl: string;
   videoId:string;
 
-  @Output() fromPlayList= new EventEmitter();
+  @Output() eventFromPlayList= new EventEmitter();
 
   constructor( public playlistService: PlaylistService) { }
 
@@ -26,9 +26,9 @@ export class PlaylistComponent implements OnInit {
       videoUrl: this.videoUrl.slice(-11),
       flag: true
     });
-    this.videoTitle='';
-    this.videoUrl='';
-    this.fromPlayList.emit();
+    // this.videoTitle='';
+    // this.videoUrl='';
+    this.eventFromPlayList.emit();
   }
 
   ngOnInit() {}
