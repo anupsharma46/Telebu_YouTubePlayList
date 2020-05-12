@@ -23,29 +23,18 @@
       <div class="modal-body">
         <form (ngSubmit)="addVideo()">    
           <div class="form-group">  
-              <label for="videoTitle">Enter Titile:</label>  
-                  <input type="text" id="videoTitle" name="videoTitle" [(ngModel)]="videoTitle" class="form-control" #titleVal="ngModel" required/>               
-                  <div *ngIf="titleVal.invalid && titleVal.touched" class="text text-danger">
-                    <p *ngIf="titleVal.errors.required">
-                      Please enter video title.
-                    </p>
-                </div>
-        </div> 
-           
-        <div class="form-group">  
+            <label for="videoTitle">Enter Titile:</label>  
+            <input type="text" id="videoTitle" name="videoTitle" [(ngModel)]="videoTitle" class="form-control" #titleVal="ngModel" required/>                                
+          </div>           
+          <div class="form-group">  
             <label for="videoUrl">Enter Url:</label>  
-                <input type="text" id="videoUrl" name="videoUrl" class="form-control" [(ngModel)]="videoUrl" #urlVal="ngModel" required/>               
-                <div *ngIf="urlVal.invalid && urlVal.touched" class="text text-danger">
-                  <p *ngIf="urlVal.errors.required">
-                    Please enter video url.
-                  </p>
-              </div>
-              </div>
+            <input type="text" id="videoUrl" name="videoUrl" class="form-control" [(ngModel)]="videoUrl" #urlVal="ngModel" required/>               
+          </div>
           <div class="form-group text-left">    
               <button class="btn btn-info btn-sm" type="submit" [disabled]="titleVal.invalid || urlVal.invalid">Add Video</button>    
-          </div>  
-          <!-- <p class="text-success">Video added successfully.</p> -->
-       </form>
+          </div> 
+          <p *ngIf="message" class="text-success">Video added successfully.</p>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default btn-sumbit" data-dismiss="modal">Close</button>

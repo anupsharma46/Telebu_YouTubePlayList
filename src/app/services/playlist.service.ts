@@ -35,12 +35,12 @@ export class PlaylistService {
   }
 
   createVideoPlayer(videoinfo:any) {
-      return new YT.Player(videoinfo.playListId, {
+      return new window['YT'].Player(videoinfo.playListId, {
          height: '180',
          width: '300',
          videoId: videoinfo.videoUrl,
          events: {
-           //'onReady': this.onPlayerReady
+          'onReady': this.onPlayerReady
          }
       });
   }

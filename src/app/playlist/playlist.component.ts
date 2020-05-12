@@ -12,6 +12,7 @@ export class PlaylistComponent implements OnInit {
   videoTitle: string;
   videoUrl: string;
   videoId:string;
+  message:boolean = false;
 
   @Output() eventFromPlayList= new EventEmitter();
 
@@ -26,8 +27,9 @@ export class PlaylistComponent implements OnInit {
       videoUrl: this.videoUrl.slice(-11),
       flag: true
     });
-    // this.videoTitle='';
-    // this.videoUrl='';
+    this.message=true;
+    this.videoTitle='';
+    this.videoUrl='';
     this.eventFromPlayList.emit();
   }
 
